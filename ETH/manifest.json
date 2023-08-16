@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Ethereum",
+  "description": "Ethereum prices",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+  "default_icon": {
+    "32": "eth.png"
+    }
+  },
+  "permissions": ["storage"],
+  "commands": {
+  "inject-script": {
+    "suggested_key": "Ctrl+Q",
+    "description": "Inject a script on the page"
+    }
+  }
+}
