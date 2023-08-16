@@ -13,6 +13,7 @@
 6. **Load the Extension:**
 
    -Click on the 'Load Unpacked' or 'Load Extension' button.
+
    -Navigate to the directory where you've cloned the repository.
 
 7. **Select Your Crypto:** Locate and select the cryptocurrency of your interest from the repository directory.
