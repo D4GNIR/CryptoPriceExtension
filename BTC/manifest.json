@@ -9,9 +9,10 @@
   "action": {
   "default_icon": {
     "32": "btc.png"
-    }
+    },
+    "default_popup": "coininfo.html"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage","activeTab"],
   "commands": {
   "inject-script": {
     "suggested_key": "Ctrl+Q",
