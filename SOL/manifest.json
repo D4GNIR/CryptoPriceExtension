@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Solana",
+  "description": "SOL prices",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+  "default_icon": {
+    "32": "sol.png"
+    },
+    "default_popup": "coininfo.html"
+  },
+  "permissions": ["storage","activeTab"],
+  "commands": {
+  "inject-script": {
+    "suggested_key": "Ctrl+Q",
+    "description": "Inject a script on the page"
+    }
+  }
+}
