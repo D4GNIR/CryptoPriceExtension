@@ -39,7 +39,7 @@ fetch(`${apiUrl}?${new URLSearchParams(params)}`)
         }
       },
       series: [{
-        name: 'Prix du Bitcoin (USD)',
+        name: 'Prix Solana (USD)',
         data: filteredPrices
       }],
       xaxis: {
