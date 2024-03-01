@@ -43,7 +43,7 @@ main {
 
 .chart-box {
     border: 1px solid #ccc;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     background-color: #f9f9f9;
     /* width: 500px; */
 }
@@ -63,4 +63,9 @@ button:hover {
 
 img {
     max-height: 40px;
+}
+
+main p {
+    text-align: center;
+    padding: 5px 20px 20px 20px;
 }
