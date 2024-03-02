@@ -43,3 +43,44 @@ function loadScript(scriptName) {
   script.src = scriptName;
   document.head.appendChild(script);
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var inputElement = document.getElementById('valeur');
+  var sauvegarderButton = document.getElementById('sauvegarder');
+  var soldeActuel = localStorage.getItem('soldeSolana');
+
+  // si pas de valeur dans le local storage on initialise
+  if (!soldeActuel) {
+    soldeActuel = 1;
+    localStorage.setItem('soldeSolana', soldeActuel);
+  }
+  // on met à jour la zone de saisie
+  inputElement.value = soldeActuel;
+
+  //click sur le bouton sauvegarder
+  sauvegarderButton.addEventListener('click', function() {
+    // on récupère la valeur saisie, on la met dans le local storage et on l'affiche dans la saisie + appel au calcul
+    var nouveauSolde = inputElement.value;
+    localStorage.setItem('soldeSolana', nouveauSolde);
+    inputElement.value = nouveauSolde;
+    conversion()
+  });
+  conversion()
+});
+
+
+function conversion() {
+  var affichageDiv = document.getElementById('affichageValeur');
+  var soldeActuel = localStorage.getItem('soldeSolana');
+
+  fetch('https://api.coingecko.com/api/v3/coins/solana').then(function(response) {
+    return response.json();
+  }).then(function(data) {
+    let price = data.market_data.current_price.usd;
+    let sous = soldeActuel*parseFloat(price)
+    affichageDiv.textContent = sous.toFixed(2) + " USD (" + parseFloat(price).toFixed(2) + ")" ;
+  });
+}
+

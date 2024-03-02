@@ -69,3 +69,23 @@ main p {
     text-align: center;
     padding: 5px 20px 20px 20px;
 }
+
+.saisie{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    gap: 20px;
+}
+
+.saisie #valeur {
+    width: 70px;
+}
+
+#affichageValeur {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
